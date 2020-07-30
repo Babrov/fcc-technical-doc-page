@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+body{
+  background-color:rgb(166,196,219);
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  align-items:stretch;
+  font-size:18px;
+ font-family: 'Share Tech', sans-serif;
+}
+.navbar {
+  font-size: 1em;
+  min-width:15em;
+  width:18em;
+display: flex;
+  flex-direction:column;
+  height:100%;
+  border-right: .2em solid rgba(0,0,0,0.7);
+  position:fixed;
+  top:0px;
+  left:0px;
+}
+.navbar lu li {
+  text-decoration:none;
+  list-style-type:none;
+   border-top: .01em solid rgba(0,0,0,0.7);
+}
+.nav-link {
+  padding:0.5em 1em;
+  
+  line-height:2em;
+  font-size:1.375em;
+  padding-left:1em;
+  text-decoration: none;
+  color:black;
+
+}
+.nav-link:hover {
+color:red;
+}
+.navhead {
+  font-size:2em;
+  text-align:center;
+  
+}
+
+header{
+  padding-top:0.5em;
+  font-size:1.8em;
+text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+  padding-bottom:1em;
+}
+
+span{
+  color:red;
+  font-size:1.5em;
+  text-shadow: black 2px 2px 0px, black 4px 4px 0px;
+  
+}
+.madeby{
+  padding-top:16.5em;
+  padding-left:1em;
+}
+#main-doc{
+  height:100%;
+  width:100%;
+  text-align:left;
+  padding-left:3em;
+  padding-top:1em;
+  margin-left:18em;
+  
+
+}
+
+section p{
+  padding-left:1em;
+  padding-right:2em;
+  font-size:1.3em;
+  margin-top:-0.3em;
+  
+}
+section li{
+  font-size:1.3em;
+  padding-top:0.5em;
+  margin-left:1em;
+}
+.code {
+  background-color:rgb(245,245,245);
+  display:flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  margin: 1em 5em 1em 1em;
+  padding:0.7em 0 1em 0.7em;
+  border: 0.01em solid black;
+  border-left: 0.4em solid blue;
+  font-size: 1.3em;
+  box-shadow: 4px 1px 18px 4px rgba(0,0,0,0.28);
+  
+}
+.notonlyand{
+ padding-right:1em;
+  list-style-type:none;
+}
+.code-text {
+  background-color:rgb(128,138,135);
+}
+.links {
+  margin-bottom:3em;
+  
+}
+.links li a{
+color:black;
+  text-decoration: none;
+}
+.links li a:visited{
+color:red;
+}
+.links li a:active{
+color:blue;
+}
+@media (max-width:812px){
+  .navbar lu li{
+    height:2.5em;
+    text-align:center;
+  }
+  .navbar lu{
+    border-bottom:0.3em solid black;
+    background-color:rgb(93,138,168);
+    width:100%;
+  }
+  .navbar {
+    background-color:rgb(93,138,168);
+    position: absolute;
+    right:0;
+    left:0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 200px;
+    border: none;
+    z-index: 1;
+    font-size:0.9em;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0em;
+    margin-top: 22em;
+    padding-right:2em;
+    font-size:0.9em;
+  }
+}

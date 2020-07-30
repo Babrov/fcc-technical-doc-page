@@ -1,0 +1,113 @@
+<link rel ="stylesheet" href="fcc-tech-doc-style.css">
+<body>
+  <!-- nav-bar -->
+  
+  <nav class ="navbar" id="navbar">
+    <header class="navhead"> <span>CSS</span> @media </header>
+    <lu>
+    <li><a class="nav-link" href="#Introduction">Introduction</a> </li>
+   <li> <a class="nav-link" href="#CSS_Syntax">CSS Syntax</a></li>
+   <li> <a class="nav-link" href="#Media_Types">Media Types</a></li>
+   <li> <a class="nav-link" href="#Accessibility_concerns">Accessibility concerns</a></li>
+   <li> <a class="nav-link" href="#Examples">Examples</a></li>
+   <li> <a class="nav-link" href="#Useful_Links">Useful Links</a></li>
+    </lu>
+  </nav>
+   
+   <!-- main content -->
+  
+  <main id="main-doc">
+
+    <section class="main-section"  id="Introduction">
+      <header>Introduction</header>
+      <div class="section">
+      <p>The @media CSS at-rule can be used to apply part of a style sheet based on the result of one or more media queries. With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.</p>
+      <p>Media queries can be used to check many things, such as:</p>
+      <ul> 
+        <li>width and height of the viewport</li>
+        <li>width and height of the device</li>
+        <li>orientation (is the tablet/phone in landscape or portrait mode?)</li>
+        <li>resolution</li>
+      </ul>
+    </section>
+    <section id ="CSS_Syntax"  class="main-section">
+     <header>CSS Syntax </header>
+      <code class="code">@media not|only mediatype and (mediafeature and|or|not mediafeature) {
+  <br>CSS-Code;
+<br>}</code>
+      <p>meaning of the <b>not</b>, <b>only</b> and <b>and</b> keywords:</p>
+      <ul class="notonlyand">
+        <li><b>not:</b> The not keyword reverts the meaning of an entire media query.</li>
+        <li><b>only:</b> The only keyword prevents older browsers that do not support media queries with media features from applying the specified styles. <b>It has no effect on modern browsers.</b></li>
+        <li><b>and:</b> The and keyword combines a media feature with a media type or other media features.</li>
+        <li>They are all optional. However, if you use <b>not</b> or   <b>only</b>, you must also specify a media type.</li>
+      </ul>
+      
+        <code class="code">
+          /* At the top level of your code */ <br>
+@media screen and (min-width: 900px) {<br>
+  article {<br>
+    padding: 1rem 3rem; <br>
+   } <br>
+}  <br>
+<br>
+/* Nested within another conditional at-rule */ <br>
+@supports (display: flex) {<br>
+  @media screen and (min-width: 900px) { <br>
+    article {<br>
+      display: flex; <br>
+    }<br>
+  }<br>
+}
+          </code>
+    </section>
+    <section id ="Media_Types" class="main-section">
+      <header>Media Types</header>
+      <p><b>all</b> -	Default. Used for all media type devices</p>
+      <p><b>print</b> - Used for printers</p>
+      <p><b>screen</b> - Used for computer screens, tablets, smart-phones etc.</p>
+      <p><b>speech</b> - Used for screenreaders that "reads" the page out loud</p>
+    </section>
+    <section id ="Accessibility_concerns" class="main-section">
+      <header>Accessibility concerns</header>
+      <p>To best accommodate people who adjust a site's text size, use <code class="code-text">em</code>s when you need a <code class="code-text">length</code> for your media queries.
+
+        Both <code class="code-text">em</code> and <code class="code-text">px</code> are valid units, but <code class="code-text">em</code> works better if the user changes the browser text size.
+
+Also consider using Level 4 media queries to improve the user's experience. For example, <code class="code-text">prefers-reduced-motion</code> to detect if the user has requested that the system minimize the amount of animation or motion it uses.</p>
+    </section>
+    <section id ="Examples" class="main-section">
+      <header>Examples</header>
+      <p><b>Testing for print and screen media types</b></p>
+    
+        <code  class="code">
+          @media print { <br>
+  body { font-size: 10pt; } <br>
+} <br>
+
+@media screen { <br>
+  body { font-size: 13px; } <br>
+} <br>
+
+@media screen, print { <br>
+  body { line-height: 1.2; } <br>
+} <br>
+
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 480px) <br>
+  and (resolution: 150dpi) { <br>
+    body { line-height: 1.4; } <br>
+}
+        </code>
+    </section>
+    <section id ="Useful_Links" class="main-section">
+      <header>Useful Links</header>
+      <p>More information you can find on:</p>
+      <ul class="links">
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media"> MDN</a></li>
+        <li><a href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp">W3schools</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
